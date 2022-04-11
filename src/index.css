@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.logImg {
+  background: url('/src/images/logImg.png');
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logTxt{
+  font-family:'Poppins', sans-serif;
+}
+
+select{
+  appearance: none;
+  background: url('/src/images/formArrow.svg');
+  background-size: .8em;
+  background-position: 11rem ;
+  background-repeat: no-repeat; 
+}
+
+.tables select{
+  appearance: none;
+  background: url('/src/images/formArrow.svg');
+  background-size: .8em;
+  background-position: right;
+  background-repeat: no-repeat; 
+}
+
+@layer base{
+  body{
+    @apply bg-[#f9f9f9]
+  }
 }
